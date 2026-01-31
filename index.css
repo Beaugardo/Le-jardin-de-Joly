@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-joly-blue: #4DA3FF;
+  --color-joly-green: #7DC37D;
+  --color-joly-greenDeep: #2E8B57;
+  --color-joly-yellow: #FFD54F;
+  --color-joly-peach: #FFA07A;
+  --color-joly-beige: #FDFBF7;
+  --font-family-sans: 'Nunito', sans-serif;
+  --font-family-display: 'Quicksand', sans-serif;
+  --font-family-accent: 'Poppins', sans-serif;
+}
+
+/* Custom styles for the application */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translate(0, 0px); }
+  50% { transform: translate(0, 15px); }
+  100% { transform: translate(0, -0px); }
+}
+
+.bg-wave {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23FDFBF7' fill-opacity='1' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,144C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+/* Custom components */
+.font-display {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.font-accent {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating {
+    animation: floating 2s ease-in-out infinite;
+  }
+}
